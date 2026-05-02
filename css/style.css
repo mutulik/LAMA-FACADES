@@ -1,0 +1,504 @@
+/* Shared Styles for LAMA FACADES */
+:root {
+    --primary: #1a1a1a;
+    --accent: #c5a059;
+    --light: #f4f4f4;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background: var(--white);
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo img {
+    height: 100px; 
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Optional: adds a nice effect when hovering */
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Optional: logo grows slightly when hovered */
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+    nav ul li {
+        margin-left: 2.5rem;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* This creates the 'box' that holds your text on top of the image */
+    min-height: 500px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically */
+    align-items: center;     /* Centers text horizontally */
+    text-align: center;
+    
+    color: white; 
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;            /* Makes the "EXPERT FACADE" text big and bold */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;             /* Keeps the sub-text from being too wide */
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* 1. The Grid Container */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates 3 columns automatically */
+    gap: 30px;
+    padding: 40px 8%;
+    background-color: #fff;
+}
+
+/* 2. The Individual Service Card */
+.service-card {
+    background: #ffffff;
+    border-bottom: 5px solid var(--accent); /* The gold line at the bottom */
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stacks Image -> Title -> Text */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* 3. The Image Inside the Card (This fixes your issue) */
+.service-card img {
+    width: 100%;          /* Makes image fill the card width */
+    height: 250px;         /* Sets a uniform height for all photos */
+    object-fit: cover;     /* Crops the photo perfectly so it doesn't stretch */
+    display: block;
+}
+
+/* 4. The Text Inside the Card */
+.service-card h3 {
+    padding: 20px 20px 5px 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.service-card p {
+    padding: 0 20px 20px 20px;
+    color: #666;
+    font-size: 0.95rem;
+}
+/* Container for the service rows */
+.services-detail {
+    padding: 60px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The horizontal row for each service */
+/* 1. Add a subtle background to every other row to create a high-end feel */
+.service-row:nth-child(even) {
+    background-color: #f9f9f9; /* Very light grey */
+    flex-direction: row-reverse;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px; /* Increased gap for breathing room */
+    padding: 100px 10%; /* More vertical space */
+    border-bottom: 1px solid #eee;
+}
+
+/* 2. Fix the Image Box */
+.service-image {
+    flex: 1;
+    max-width: 550px; /* Limits width so it doesn't get too big */
+    height: 400px;
+    box-shadow: 20px 20px 0px var(--accent); /* The "Envirorend" style offset shadow */
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-row:hover img {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* 3. Improve the Typography */
+.service-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.service-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: var(--primary);
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.service-content ul {
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.service-content ul li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+    position: relative;
+    font-weight: 600;
+}
+
+.service-content ul li::before {
+    content: "→"; /* Professional arrow instead of a basic bullet */
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+.page-header {
+    background-color: #1a1a1a !important; /* Forces the black background back */
+    display: block !important;
+    padding: 80px 0 !important;
+    text-align: center;
+    width: 100%;
+    border-bottom: 5px solid var(--accent);
+}
+
+.page-header h1 {
+    color: #ffffff !important; /* Forces text to be white */
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.page-header p {
+    color: #ffffff !important;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin: 20px auto 0;
+    max-width: 600px;
+}
+
+/* Fix for the gold line */
+.page-header h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin: 15px auto 0;
+}
+/* Contact Page Layout */
+.contact-container {
+    display: flex;
+    gap: 50px;
+    padding: 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+.info-item strong {
+    display: block;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Ensure all elements calculate width correctly */
+.contact-form *, .contact-form *::before, .contact-form *::after {
+    box-sizing: border-box;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 350px;
+    background: #f4f4f4; /* The light grey background */
+    padding: 40px;
+    border-top: 5px solid var(--accent);
+    height: fit-content; /* Ensures the box grows with the content */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* This forces the inputs and textarea to stay INSIDE the box */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Fix for the textarea specifically */
+.form-group textarea {
+    resize: vertical; /* Prevents user from stretching it sideways */
+    min-height: 120px;
+}
+
+/* The button fix */
+.contact-form .btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--accent);
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+/* 1. The Container for the 3 cards */
+.services-preview {
+    padding: 80px 8%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+/* 2. The Grid System */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Keeps 3 in a row */
+    gap: 30px;
+}
+
+/* 3. The Individual Card */
+.service-card {
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid var(--accent); /* The gold line */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Keeps the image zoom inside the box */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* 4. THE CRITICAL FIX: The Image sizing */
+.service-card img {
+    width: 100%;           /* Fills the card width */
+    height: 250px;          /* Forces a uniform height */
+    object-fit: cover;      /* Crops the photo center-out so it doesn't stretch */
+    display: block;
+}
+
+/* 5. Text inside the card */
+.service-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.service-card p {
+    padding: 0 20px 25px;
+    color: #666;
+    line-height: 1.5;
+}
+.portfolio-container {
+    padding: 60px 8%;
+}
+
+.portfolio-year-block {
+    margin-bottom: 80px; /* Space between years */
+}
+
+.year-title {
+    font-size: 2rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* The gold line that stretches across the page after the year */
+.year-title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.3;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-item {
+    position: relative;
+    height: 350px;
+    background: #eee;
+    overflow: hidden;
+    border-bottom: 5px solid var(--accent);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
+.model-container {
+    width: 100%;
+    height: 500px; /* Gives the user plenty of room to spin the model */
+    background-color: #f4f4f4;
+    border-bottom: 5px solid var(--accent);
+    margin-bottom: 50px;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+.color-controls {
+    text-align: center;
+    padding: 30px;
+    background: #1a1a1a;
+    color: white;
+}
+
+.palette {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.color-btn {
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    color: #000; /* Text color for buttons */
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+    border-color: var(--accent);
+}
+.featured-3d h2 {
+    padding-left: 8%; /* Matches your other pages */
+    margin-top: 40px;
+    text-transform: uppercase;
+}

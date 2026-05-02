@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Put this in the <head> of portfolio.html -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Portfolio | LAMA FACADES</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="featured-3d">
+    <h2 class="year-title">Interactive Design Studio</h2>
+    <div class="model-container">
+        <!-- Add an ID so JavaScript can find it -->
+        <model-viewer id="house-model" 
+            src="../portfolio/models/house.glb" 
+            ar camera-controls auto-rotate shadow-intensity="1">
+        </model-viewer>
+    </div>
+
+    <!-- The Color Palette -->
+    <div class="color-controls">
+        <h3>Select Rendering Finish:</h3>
+        <div class="palette">
+            <button class="color-btn" data-color="1, 1, 1, 1" style="background: #ffffff;">Arctic White</button>
+            <button class="color-btn" data-color="0.8, 0.7, 0.5, 1" style="background: #d2b48c;">Sandstone</button>
+            <button class="color-btn" data-color="0.3, 0.3, 0.3, 1" style="background: #4d4d4d;">Anthracite</button>
+            <button class="color-btn" data-color="0.9, 0.8, 0.7, 1" style="background: #f5f5dc;">Cream</button>
+        </div>
+    </div>
+</section>
+    <section class="portfolio-container">
+    
+    <!-- 2026 Projects -->
+    <div class="portfolio-year-block">
+        <h2 class="year-title">2026 Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="../portfolio/2026/project1.jpeg" alt="Project 2026">
+                <div class="portfolio-overlay"><span>Silicone Rendering - London</span></div>
+            </div>
+            <!-- Add more 2026 items here -->
+        </div>
+    </div>
+
+    <!-- 2025 Projects -->
+    <div class="portfolio-year-block">
+        <h2 class="year-title">2025 Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="../portfolio/2025/project2.jpeg" alt="Project 2025">
+                <div class="portfolio-overlay"><span>Wall Insulation - Essex</span></div>
+            </div>
+            <div class="portfolio-item">
+                <img src="../portfolio/2025/project3.jpeg" alt="Project 2025">
+                <div class="portfolio-overlay"><span>Cladding - Dagenham</span></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item">
+                <img src="../portfolio/project1.jpeg" alt="Recent Project 1">
+                <div class="portfolio-overlay">
+                    <span>Silicone Rendering - Essex</span>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="portfolio-item">
+                <img src="../portfolio/project2.jpeg" alt="Recent Project 2">
+                <div class="portfolio-overlay">
+                    <span>Wall Insulation - London</span>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="portfolio-item">
+                <img src="../portfolio/project3.jpeg" alt="Recent Project 3">
+                <div class="portfolio-overlay">
+                    <span>Cladding System - Dagenham</span>
+                </div>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 LAMA FACADES LTD.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
