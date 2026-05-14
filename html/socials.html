@@ -11,20 +11,33 @@
 </head>
 <body>
 
-    <header class="header-socials"> <!-- Add this class here -->
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo" class="logo">
+    <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo">
         </a>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+
+        <!-- The Menu Toggle (Hidden Checkbox) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <!-- The Hamburger Icon -->
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- The Navigation Dropdown -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="socials.html" class = "active">Socials</a></li>
-    </nav>
+                <li><a href="socials.html" class="active">Socials</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
     <section class="social-hero">

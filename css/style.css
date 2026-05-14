@@ -14,15 +14,31 @@
 }
 
 header {
-    background: var(--white);
-    padding: 1.2rem 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--light);
-    position: sticky;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: fixed; /* Optional: keeps menu at top as you scroll */
     top: 0;
     z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* This forces the gap between logo and hamburger */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: stops the menu from going too far on huge screens */
+    margin: 0 auto; /* Centers the container */
+    padding: 10px 5%; /* 5% padding on left/right creates that professional gap */
+}
+
+.hamburger-label {
+    margin-left: auto; /* Extra insurance to push it to the right */
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 
@@ -111,9 +127,11 @@ nav ul {
 }
 
 .our-story p {
-    font-size: 1.1rem;
     line-height: 1.8;
-    color: #444;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #333;
 }
 .btn {
     display: inline-block;
@@ -647,4 +665,120 @@ body {
 
 main, section {
     flex: 1;
+}
+/* Header Layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hide the checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* Hamburger Icon Styling */
+.hamburger-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Space between bars */
+    padding: 10px;
+}
+
+.hamburger-label span {
+    display: block;
+    width: 35px;
+    height: 3px; /* Slightly thicker for better visibility */
+    background: #1a1a1a;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* The Full Dropdown Menu */
+.main-nav {
+    position: absolute;
+    top: 100%; /* Sits right below the header */
+    left: 0;
+    width: 100%;
+    background: #1a1a1a; /* Professional black background */
+    max-height: 0; /* Starts hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin: 15px 0;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Logic: When checkbox is checked, show menu */
+.menu-checkbox:checked ~ .main-nav {
+    max-height: 500px; /* Adjust based on your number of links */
+}
+
+/* Logic: Transform hamburger to an 'X' when open */
+.menu-checkbox:checked + .hamburger-label span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-checkbox:checked + .hamburger-label span:nth-child(2) {
+    opacity: 0;
+}
+.menu-checkbox:checked + .hamburger-label span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Highlight for Active Page */
+.main-nav ul li a.active {
+    color: #b59410; /* Gold */
+}
+/* Add this to prevent the house image from being hidden under the header */
+body {
+    padding-top: 80px; /* Match this to the height of your header */
+}
+
+.hero {
+    /* Ensure the background image covers the area properly */
+    background-size: cover;
+    background-position: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 60px; /* Control size here */
+    width: auto;
+}
+
+.hamburger-label span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
 }
