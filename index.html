@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- This sends the user to your index page automatically after 0 seconds -->
-    <meta http-equiv="refresh" content="0; url=html/index" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMA FACADES | index</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <p>Redirecting to <a href="html/index">Lama Facades</a>...</p>
+    <header>
+    <div class="header-container">
+        <a href="index" class="logo">
+            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo">
+        </a>
+
+        <!-- The Menu Toggle (Hidden Checkbox) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <!-- The Hamburger Icon -->
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- The Navigation Dropdown -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index" class="active">Home </a></li>
+                <li><a href="services">Services</a></li>
+                <!-- <li><a href="portfolio">Portfolio</a></li> -->
+                <li><a href="contact">Contact</a></li>
+                <li><a href="socials">Socials</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section class="hero">
+        <h1>EXPERT FACADE & RENDERING</h1>
+        <p>Premium solutions for External Wall Insulation and Silicone Rendering.</p>
+        <a href="services" class="btn">VIEW SERVICES</a>
+    </section>
+
+    <!-- NEW STORY SECTION -->
+    <section class="our-story">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>At LAMA FACADES, we don't just apply render; we protect indexs. We started with a simple goal: to bring high-end architectural finishes to every indexowner. With over 11 years of experience across the UK, our specialist team ensures every project is executed with precision, using only the best materials like EWI-040 to ensure every grain is perfect.</p>
+        </div>
+    </section>
+
+    <section class="services-preview">
+        <h2>Our Core Services</h2>
+        <div class="service-grid">
+            <a href="services#ewi" class="service-card">
+                <img src="../images/ewi.jpeg" alt="Wall Insulation">
+                <h3>WALL INSULATION</h3>
+                <p>High-performance thermal systems.</p>
+            </a>
+            <a href="services#rendering" class="service-card">
+                <img src="../images/render.jpeg" alt="Silicone Rendering">
+                <h3>SILICONE RENDERING</h3>
+                <p>Water-repellent, modern finishes.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <p>&copy; 2026 LAMA FACADES LTD. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>
