@@ -81,7 +81,40 @@ nav ul {
     max-width: 700px;             /* Keeps the sub-text from being too wide */
     margin-bottom: 30px;
 }
+.our-story {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light contrast against the white background */
+    text-align: center;
+}
 
+.our-story .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-story h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+}
+
+/* Subtle gold line under the story heading to match your brand */
+.our-story h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #b59410;
+    margin: 10px auto 0;
+}
+
+.our-story p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
 .btn {
     display: inline-block;
     background: var(--accent);
@@ -567,4 +600,51 @@ model-viewer {
     margin: 0;
     display: flex;
     gap: 25px;
+}
+/* Navigation Styling */
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Default link color */
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 5px 0;
+}
+
+/* The Active Link Highlight */
+nav ul li a.active {
+    color: #b59410; /* Gold color to match your logo */
+    font-weight: 700;
+    border-bottom: 2px solid #b59410; /* Adds a stylish underline */
+}
+
+/* Hover effect for other links */
+nav ul li a:hover {
+    color: #b59410;
+}
+/* Black Footer Banner */
+.main-footer {
+    background-color: #000000; /* Solid Black */
+    color: #ffffff; /* White Text */
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to bottom if page content is short */
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* Ensures the footer stays at the bottom of the screen on short pages */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main, section {
+    flex: 1;
 }
