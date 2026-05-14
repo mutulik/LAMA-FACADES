@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMA FACADES | Social Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="socials.html" class="active">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="social-hero">
+        <h1>Follow Our Projects</h1>
+        <p>Real-time updates from our latest EWI and Rendering sites.</p>
+    </section>
+
+    <div class="feed-container">
+        <!-- Instagram Section -->
+        <div class="social-column">
+            <h2><i class="fab fa-instagram"></i> @lama.facades</h2>
+            <!-- Replace the div below with your Behold.so or Elfsight widget code -->
+            <div id="instagram-feed">
+                <p>Loading Instagram Feed...</p>
+            </div>
+            <a href="https://www.instagram.com/lama.facades/" target="_blank" class="btn">View on Instagram</a>
+        </div>
+
+        <!-- Facebook Section -->
+        <div class="social-column">
+            <h2><i class="fab fa-facebook"></i> Facebook Updates</h2>
+            <!-- Facebook Page Plugin (Official Embed) -->
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"></script>
+            
+            <div class="fb-page" 
+                data-href="https://www.facebook.com/profile.php?id=61589238324711" 
+                data-tabs="timeline" 
+                data-width="500" 
+                data-height="600" 
+                data-small-header="false" 
+                data-adapt-container-width="true" 
+                data-hide-cover="false" 
+                data-show-facepile="true">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

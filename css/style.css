@@ -502,3 +502,34 @@ model-viewer {
     margin-top: 40px;
     text-transform: uppercase;
 }
+
+.feed-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 5%;
+    background: #f4f4f4;
+    gap: 30px;
+}
+
+.social-column {
+    flex: 1;
+    min-width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.social-column h2 {
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.social-hero {
+    text-align: center;
+    padding: 60px 0;
+    background: #1a1a1a;
+    color: white;
+}
