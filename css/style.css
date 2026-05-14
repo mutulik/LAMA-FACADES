@@ -506,24 +506,18 @@ model-viewer {
 /* Container to hold both feeds */
 .feed-container {
     display: flex;
-    flex-wrap: wrap; /* Allows stacking on mobile */
+    flex-wrap: nowrap; /* Forces them to stay side-by-side on desktop */
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
-    padding: 40px 5%;
-    max-width: 1200px;
-    margin: 0 auto; /* Centers the whole block */
+    gap: 20px;
+    padding: 40px 2%;
+    overflow-x: auto; /* Adds a scrollbar ONLY on mobile if they don't fit */
 }
 
-/* Individual boxes for FB and IG */
 .social-column {
     flex: 1;
-    min-width: 320px;
-    max-width: 500px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-width: 300px; /* Ensures they don't get TOO skinny */
+    max-width: 380px;
 }
 
 /* Header styling */
@@ -531,4 +525,46 @@ model-viewer {
     text-align: center;
     padding: 40px 20px;
     background: #f8f9fa;
+}
+/* TikTok Specific Button */
+.btn-tiktok {
+    background: #000000 !important; /* TikTok Black */
+    border-bottom: 3px solid #ff0050; /* TikTok Pink Accent */
+}
+
+.btn-tiktok:hover {
+    background: #ff0050 !important;
+    color: white;
+}
+
+/* Instagram Specific Button (Optional) */
+.btn-insta {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    color: white;
+}
+
+/* Fix for internal scroll if the TikTok feed gets too long */
+.feed-content {
+    max-height: 600px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+/* Only targets the logo on the socials page */
+.header-socials {
+    padding: 10px 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-socials .logo {
+    height: 80px; /* Much smaller height for the socials page */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Keeps the nav links aligned with the smaller logo */
+.header-socials nav ul {
+    margin: 0;
+    display: flex;
+    gap: 25px;
 }

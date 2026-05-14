@@ -4,70 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAMA FACADES | Social Hub</title>
+    <!-- Link to your main CSS file -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo">
+
+    <header class="header-socials"> <!-- Add this class here -->
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="../images/logo.jpeg" alt="LAMA FACADES Logo" class="logo">
         </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="socials.html" class="active">Socials</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="socials.html" class="nav-active">SOCIALS</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="social-hero">
         <h1>Follow Our Projects</h1>
-        <p>Real-time updates from our latest EWI and Rendering sites.</p>
+        <p>Real-time updates from our latest EWI and Rendering sites across the UK.</p>
     </section>
 
-    <div class="feed-container">
-        <!-- Instagram Section -->
+    <main class="feed-container">
+        
+        <!-- Instagram Column (Behold API) -->
         <div class="social-column">
-            <h2><i class="fab fa-instagram"></i> @lama.facades</h2>
-            <!-- Replace the div below with your Behold.so or Elfsight widget code -->
-            <div id="instagram-feed">
-                <p>Loading Instagram Feed...</p>
+            <h2><i class="fa-brands fa-instagram"></i> Instagram</h2>
+            <div class="feed-content">
+                <behold-widget feed-id="uHt9GmVxTL19Er0CAeOq"></behold-widget>
+                <script>
+                  (() => {
+                    const d=document,s=d.createElement("script");s.type="module";
+                    s.src="https://w.behold.so/widget.js";d.head.append(s);
+                  })();
+                </script>
             </div>
-            <a href="https://www.instagram.com/lama.facades/" target="_blank" class="btn">View on Instagram</a>
+            <a href="https://www.instagram.com/lama.facades/" target="_blank" class="btn btn-insta">View Instagram</a>
         </div>
-        <!-- TikTok Section -->
 
-    <div class="social-column">
-        <h2>Latest on TikTok</h2>
-        <div id="tiktok-feed">
-            <!-- Paste your Widget Code (from Elfsight/Curator) here -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lamafacades" data-unique-id="lamafacades"  data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > 
-                <section> <a target="_blank" href="https://www.tiktok.com/@lamafacades?refer=creator_embed">@lamafacades</a> </section> 
-            </blockquote> 
-            <script async src="https://www.tiktok.com/embed.js"></script>
-        </div>
-        <a href="https://www.tiktok.com/@lama.facades" target="_blank" class="btn" style="background: #ff0050; color: white;">Follow on TikTok</a>
-    </div>
-        <!-- Facebook Section -->
+        <!-- Facebook Column (Meta API) -->
         <div class="social-column">
-            <h2><i class="fab fa-facebook"></i> Facebook Updates</h2>
-            <!-- Facebook Page Plugin (Official Embed) -->
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"></script>
-            
-            <div class="fb-page" 
-                data-href="https://www.facebook.com/profile.php?id=61589442953931" 
-                data-tabs="timeline" 
-                data-width="500" 
-                data-height="600" 
-                data-small-header="false" 
-                data-adapt-container-width="true" 
-                data-hide-cover="false" 
-                data-show-facepile="true">
+            <h2><i class="fa-brands fa-facebook"></i> Facebook</h2>
+            <div class="feed-content">
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"></script>
+                <div class="fb-page" 
+                    data-href="https://www.facebook.com/profile.php?id=61589238324711" 
+                    data-tabs="timeline" 
+                    data-width="500" 
+                    data-small-header="false" 
+                    data-adapt-container-width="true" 
+                    data-hide-cover="false" 
+                    data-show-facepile="true">
+                </div>
             </div>
+            <a href="https://www.facebook.com/profile.php?id=61589238324711" target="_blank" class="btn btn-fb">Visit Facebook</a>
         </div>
-    </div>
+
+        <!-- TikTok Column (TikTok API) -->
+        <div class="social-column">
+            <h2><i class="fa-brands fa-tiktok"></i> TikTok</h2>
+            <div class="feed-content">
+                <blockquote class="tiktok-embed" 
+                    cite="https://www.tiktok.com/@lamafacades" 
+                    data-unique-id="lamafacades" 
+                    data-embed-type="creator" 
+                    style="max-width: 780px; min-width: 288px;">
+                    <section>
+                        <a target="_blank" href="https://www.tiktok.com/@lamafacades?refer=creator_embed">@lamafacades</a>
+                    </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <a href="https://www.tiktok.com/@lamafacades" target="_blank" class="btn btn-tiktok">Follow on TikTok</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LAMA FACADES. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
