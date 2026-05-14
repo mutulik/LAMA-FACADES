@@ -503,3 +503,32 @@ model-viewer {
     text-transform: uppercase;
 }
 
+/* Container to hold both feeds */
+.feed-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole block */
+}
+
+/* Individual boxes for FB and IG */
+.social-column {
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Header styling */
+.social-hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
